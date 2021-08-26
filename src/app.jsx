@@ -3,8 +3,6 @@ import './app.css';
 import Habit from './components/habit';
 
 function App() {
-  const name = 'geena';
-
   return <Habit />;
 }
 
