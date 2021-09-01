@@ -1,6 +1,8 @@
-import React, { Component } from 'react';
+import React, { PureComponent } from 'react';
 
-class HabitAddForm extends Component {
+class HabitAddForm extends PureComponent {
+  // PureComponent는 props와 state안에 들어 있는 데이터가 최상위에 있는 데이터가 변하지 않으면
+  //                 render함수가 호출되지 않는다. 즉, re-rendering을 하지 않는다!
   formRef = React.createRef();
   inputRef = React.createRef();
 
@@ -22,6 +24,7 @@ class HabitAddForm extends Component {
   };
 
   render() {
+    console.log('habitAddForm');
     return (
       <form ref={this.formRef} className="add-form" onSubmit={this.onSubmit}>
         <input
